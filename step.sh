@@ -2,7 +2,7 @@
 # @Author: Tamas Szucs
 # @Date:   2014-05-15 12:08:58
 # @Last Modified by:   Tamas Szucs
-# @Last Modified time: 2014-05-15 13:26:55
+# @Last Modified time: 2014-05-15 13:34:45
 
 #default message
 
@@ -17,7 +17,7 @@ echo "PARSE_PUSH_REST_KEY: $PARSE_PUSH_REST_KEY"
 echo "PARSE_PUSH_MESSAGE: $PARSE_PUSH_MESSAGE"
 
 res=$(curl -X POST \
-  -H "X-Parse-Application-Id: $PARSE_PUSH_APP_ID \
+  -H "X-Parse-Application-Id: $PARSE_PUSH_APP_ID" \
   -H "X-Parse-REST-API-Key: $PARSE_PUSH_REST_KEY" \
   -H "Content-Type: application/json" \
   -d '{
