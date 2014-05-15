@@ -2,7 +2,7 @@
 # @Author: Tamas Szucs
 # @Date:   2014-05-15 12:08:58
 # @Last Modified by:   Tamas Szucs
-# @Last Modified time: 2014-05-15 13:34:45
+# @Last Modified time: 2014-05-15 13:44:58
 
 #default message
 
@@ -20,14 +20,14 @@ res=$(curl -X POST \
   -H "X-Parse-Application-Id: $PARSE_PUSH_APP_ID" \
   -H "X-Parse-REST-API-Key: $PARSE_PUSH_REST_KEY" \
   -H "Content-Type: application/json" \
-  -d '{
-        "where": {
-          "deviceType": "ios"
+  -d "{
+        \"where\": {
+          \"deviceType\": \"ios\"
         },
-        "data": {
-          "alert": "$msg"
+        \"data\": {
+          \"alert\": "$msg"
         }
-      }' \
+      }" \
   https://api.parse.com/1/push)
 
 echo " --- Result ---"
