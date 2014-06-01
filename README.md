@@ -5,7 +5,9 @@ Push Notification with Parse. https://parse.com/
 
 To use their service you have to register first. It is possible to register a trial account for free.
 
-You also have to install the Concrete Notification Client app on your device.
+You can get the required keys and IDs from your parse app's page, similar to this: https://www.parse.com/apps/your-parse-apps-name/edit#app_keys
+
+You have to install your own Push Receiver app - you can find a template app here: https://github.com/concretebuilder/example-parse-notification-center-ios-app
 
 # Input Environment Variables
 - PARSE_PUSH_APP_ID
