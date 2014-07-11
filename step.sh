@@ -1,9 +1,3 @@
-#!/bin/bash
-# @Author: Tamas Szucs
-# @Date:   2014-05-15 12:08:58
-# @Last Modified by:   Tamas Szucs
-# @Last Modified time: 2014-07-11 11:17:06
-
 #default message
 if [ ${PARSE_PUSH_MESSAGE+x} ]; then
 	msg=$PARSE_PUSH_MESSAGE
