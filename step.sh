@@ -2,7 +2,7 @@
 if [ ${PARSE_PUSH_MESSAGE+x} ]; then
 	msg=$PARSE_PUSH_MESSAGE
 else
-	msg="Automatic build with Bitrise."
+	msg="Push from Bitrise"
 fi
 
 echo "PARSE_PUSH_APP_ID: $PARSE_PUSH_APP_ID"
