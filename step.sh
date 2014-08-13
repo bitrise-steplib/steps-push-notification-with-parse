@@ -12,6 +12,22 @@ function write_section_to_formatted_output {
   echo '' >> $formatted_output_file_path
 }
 
+if [ ! -n "$PARSE_PUSH_APP_ID" ]; then
+  echo " [!] PARSE_PUSH_APP_ID is missing! Terminating..."
+  echo
+  write_section_to_formatted_output "# Error!"
+  write_section_to_formatted_output "Reason: application id is missing."
+  exit 1
+fi
+
+if [ ! -n "$PARSE_PUSH_REST_KEY" ]; then
+  echo " [!] PARSE_PUSH_REST_KEY is missing! Terminating..."
+  echo
+  write_section_to_formatted_output "# Error!"
+  write_section_to_formatted_output "Reason: application rest key is missing."
+  exit 1
+fi
+
 if [ ${PARSE_PUSH_MESSAGE+x} ]; then
 	msg=$PARSE_PUSH_MESSAGE
 else
@@ -40,5 +56,6 @@ echo " --- Result ---"
 echo "$res"
 echo " --------------"
 
-write_section_to_formatted_output "Result:"
-write_section_to_formatted_output "${res}"
+write_section_to_formatted_output "# Push successful!"
+write_section_to_formatted_output "**Result:**"
+write_section_to_formatted_output "    ${res}"
