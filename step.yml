@@ -1,5 +1,5 @@
 ---
-name: Send Push Notification with Parse
+name: "Send Push Notification with Parse"
 description: |
   Send a push notification with [Parse](https://parse.com/).
 
@@ -37,5 +37,5 @@ inputs:
     title: "Message"
     description: |
       The text of the push message.
-    is_expand: false
+    is_expand: true
     is_required: true
