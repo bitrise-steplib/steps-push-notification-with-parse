@@ -22,14 +22,16 @@ type_tags:
   - "push notification"
   - "notification"
 is_requires_admin_user: false
-is_always_run: false
+is_always_run: true
 is_skippable: false
 dependencies: []
+run_if: ""
 inputs:
   - app_id: ""
     opts:
       title: "Parse App ID"
       description:  ""
+      summary: ""
       is_expand: false
       is_required: true
       is_dont_change_value: false
@@ -37,12 +39,14 @@ inputs:
     opts:
       title: "Parse REST API Key"
       description:  ""
+      summary: ""
       is_expand: false
       is_required: true
       is_dont_change_value: false
   - message: Automatic build with Bitrise.
     opts:
       title: "Message"
+      summary: ""
       description: |
         The text of the push message.
       is_expand: true
