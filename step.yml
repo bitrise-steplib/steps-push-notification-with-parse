@@ -1,6 +1,6 @@
----
-name: "Send Push Notification with Parse"
-description: |
+title: Send Push Notification with Parse
+summary: Send Push Notification with Parse
+description: |-
   Send a push notification with [Parse](https://parse.com/).
 
   To use their service you have to register first.
@@ -12,30 +12,44 @@ description: |
   You have to install your own Push Receiver app to receive the push notifications - you can find a
   template app here: [https://github.com/bitrise-io/example-parse-notification-center-ios-app](https://github.com/bitrise-io/example-parse-notification-center-ios-app)
 website: https://github.com/bitrise-io/steps-push-notification-with-parse
-source:
-  git: https://github.com/bitrise-io/steps-push-notification-with-parse.git
+source_code_url: https://github.com/bitrise-io/steps-push-notification-with-parse
+support_url: https://github.com/bitrise-io/steps-push-notification-with-parse/issues
 host_os_tags:
   - osx-10.9
   - osx-10.10
+project_type_tags: []
 type_tags:
   - "push notification"
   - "notification"
 is_requires_admin_user: false
+is_always_run: true
+is_skippable: false
+dependencies: []
+run_if: ""
 inputs:
-  - 
-    mapped_to: PARSE_PUSH_APP_ID
-    title: "Parse App ID"
-    is_expand: false
-    is_required: true
-  -
-    mapped_to: PARSE_PUSH_REST_KEY
-    title: "Parse REST API Key"
-    is_expand: false
-    is_required: true
-  - 
-    mapped_to: PARSE_PUSH_MESSAGE
-    title: "Message"
-    description: |
-      The text of the push message.
-    is_expand: true
-    is_required: true
+  - app_id: ""
+    opts:
+      title: "Parse App ID"
+      description:  ""
+      summary: ""
+      is_expand: false
+      is_required: true
+      is_dont_change_value: false
+  - rest_key: ""
+    opts:
+      title: "Parse REST API Key"
+      description:  ""
+      summary: ""
+      is_expand: false
+      is_required: true
+      is_dont_change_value: false
+  - message: Automatic build with Bitrise.
+    opts:
+      title: "Message"
+      summary: ""
+      description: |
+        The text of the push message.
+      is_expand: true
+      is_required: true
+      is_dont_change_value: false
+outputs: []
