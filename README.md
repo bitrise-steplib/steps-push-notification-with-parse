@@ -15,9 +15,3 @@ and call `bitrise run test`.
 
 *Check the `bitrise.yml` file for required inputs which have to be
 added to your `.bitrise.secrets.yml` file!*
-
-
-# Input Environment Variables
-- app_id
-- rest_key
-- message
