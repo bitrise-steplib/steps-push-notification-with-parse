@@ -1,6 +1,8 @@
 # Push Notification with Parse step
 
-The new Push Notification with Parse step.
+WARNING: This step is deprecated, the Push Notifications are no longer supported by Parse server.
+
+# The new Push Notification with Parse step.
 
 Bitrise step to send Push Notification with Parse. https://parse.com/
 To use their service you have to register first. It is possible to register a trial account for free.
